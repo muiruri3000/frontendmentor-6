@@ -118,11 +118,11 @@ main > article > section .four-card-feature .feature .image img{
 @media (max-width:550px){
     main > article > section .four-card-feature {
     grid-template-columns: 1fr;
-    gap: .4em;
+    gap: 1em;
    
     }
     main > article .header{
-        margin-top:25em;
+        margin-top:15em;
     }
 }
 @media (min-width:550px){
