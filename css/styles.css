@@ -1,0 +1,173 @@
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    
+/* Neutral */
+    
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    
+}
+
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/font/Poppins-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('/font/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('/font/Poppins-SemiBold.ttf');
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*, *::before, *::after{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 0.9375em;
+}
+main{
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+article{
+
+
+    
+    display: flex;
+   
+
+    flex-direction: column;
+    align-items: center;
+
+
+ 
+}
+
+main > article .header{
+
+    text-align: center;
+    max-width: 30em;
+}
+
+main > article > .header h1{
+
+    font-family: 'Poppins-Light';
+    font-weight: 100;
+}
+
+main > article > .header h2{
+
+    font-family: 'Poppins-Bold';
+   
+}
+main > article .header p{
+    padding: .5em;
+    font-family: 'Poppins-Regular';
+    font-size: 0.8em;
+    
+}
+
+main > article > section{
+    
+   max-width:60em;
+    padding: 2em;
+}
+
+
+main > article > section .four-card-feature{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+   
+}
+main > article > section .four-card-feature .feature{
+    padding: 2em 1em 0.9em 1em;
+    box-shadow: .5em .5em .5em .5em rgba(0,0,0,0.3);
+    
+}
+main > article > section .four-card-feature .feature p{
+    padding-bottom: 1.5em;
+    font-size: .8em;
+}
+main > article > section .four-card-feature .feature .image{
+    display: flex;
+    justify-content: flex-end;
+}
+
+main > article > section .four-card-feature .feature .image img{
+
+    width: 2.5em;
+}
+@media (max-width:550px){
+    main > article > section .four-card-feature {
+    grid-template-columns: 1fr;
+    gap: .4em;
+   
+    }
+    main > article .header{
+        margin-top:25em;
+    }
+}
+@media (min-width:550px){
+    main > article > section .four-card-feature {
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+   
+    }
+}
+@media (min-width:760px){
+    main > article > section .four-card-feature{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas: ".one.""two.three"".four.";
+        
+    }
+    
+
+main > article >section .four-card-feature .card1:nth-of-type(1){
+    grid-area: one;
+    grid-row: 1 / 3;
+    border-top:0.2em solid var(--Red);
+    
+    
+}
+main > article > section .four-card-feature .card2:nth-of-type(2){
+    grid-area: two;
+    grid-row: 2 / 4;
+    border-top:0.2em solid var(--Cyan);
+    
+    
+}
+main > article > section .four-card-feature .card3:nth-of-type(3){
+    grid-area: three;
+    grid-row: 2 / 4;
+    border-top:0.2em solid var(--Blue);
+    
+    
+}
+main > article >section .four-card-feature .card4:nth-of-type(4){
+    grid-area: four;
+    grid-row: 3 / 5;
+    border-top:0.2em solid var(--Orange);
+   
+  
+}
+    }
+    
